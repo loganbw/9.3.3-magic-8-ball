@@ -13,17 +13,17 @@ public class Main {
                 "Give me time to think Morty", "I'm Tiny Rick!!!! Wait what was the question again?", "Uhhhhh..", "Im busy right now Morty", "Out on an adventure be back whenever",
                 "existence is pain!", "Look at me! THAT'S A NO!", "Nobody exists on purpose, aka no", "go ahead and do it, but i will say you will fail", "failure like Jerry and Beth "
         };
-        int randomPhrase = words.nextInt(phrases.length);
 
         Scanner scanner = new Scanner(System.in);
         label:
         while (true) {
+            int randomPhrase = words.nextInt(phrases.length);
             String myInput = scanner.nextLine();
             switch (String.valueOf(myInput)) {
                 case "":
                     System.out.println("That's not a question! Try again!!");
                     break;
-                case "finish":
+                case "jerry":
                     System.out.println("HAHA ANY TIME YOU NEED TINY RICK, ILL BE HERE!");
                     break label;
                 default:
