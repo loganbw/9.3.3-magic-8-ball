@@ -16,13 +16,21 @@ public class Main {
         int randomPhrase = words.nextInt(phrases.length);
 
         Scanner scanner = new Scanner(System.in);
-        String myInput = scanner.nextLine();
-
-        if (String.valueOf(myInput).equals(""))
-        {
-            System.out.println("That's not a question! Try again!!");
-        } else {
-            System.out.println(phrases[randomPhrase]);
+        label:
+        while (true) {
+            String myInput = scanner.nextLine();
+            switch (String.valueOf(myInput)) {
+                case "":
+                    System.out.println("That's not a question! Try again!!");
+                    break;
+                case "finish":
+                    System.out.println("HAHA ANY TIME YOU NEED TINY RICK, ILL BE HERE!");
+                    break label;
+                default:
+                    System.out.println(phrases[randomPhrase]);
+                    break;
+            }
         }
     }
+
 }
